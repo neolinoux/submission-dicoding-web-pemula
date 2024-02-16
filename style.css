@@ -16,7 +16,7 @@ body {
 
 header.nav-container {
   width: 100%;
-  max-width: 1600px;
+  /* max-width: 1980px; */
   padding-block: 1rem;
   margin-inline: auto;
  
@@ -39,9 +39,9 @@ header.nav-container {
 .nav-logo {
   display: flex;
   align-items: center;
-  justify-content: start;
+  /* justify-content: start; */
   flex-wrap: wrap;
-  width: 65%;
+  /* width: 100%; */
   /* border: solid; */
 }
 
@@ -57,7 +57,7 @@ header.nav-container {
   
 }
 
-nav.nav-list ul {
+ul {
   padding-left: 0;
   width: 25%;
   display: flex;
@@ -65,47 +65,222 @@ nav.nav-list ul {
   gap: 2rem 1rem;
   flex-direction: row;
   flex-wrap: wrap;
-
+  margin-bottom: 0;
   /* border: solid; */
 }
 
-.nav-list ul li {
+ul li {
   list-style-type: none;
 }
 
-.nav-list li img {
-  max-width: 40px;
+li img {
+  max-width: 30px;
   border-radius: 999px;
  
   transition: all 0.2s ease-in-out;
 }
 
 main {
-  display: flex;
-  flex-direction: row;
   flex-wrap: wrap;
-  justify-content: space-evenly;
-  background-color: aquamarine;
-  border: solid 1px;
+  justify-content: center;
+  background-color: #2D3250;
+
+  flex: 1;
+ 
+  width: 100%;
+  /* max-width: 1980px; */
+  margin-inline: auto;
+  padding: 2rem 4rem;
+ 
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .content{
-  width: 67%;
-  border: solid 1px;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
 }
 
-article {
-  background-color: wheat;
+#foto-diri {
+  max-width: 80%;
+  align-self: center;
 }
 
-aside {
-  width: 27%;
+aside.desc {
+  width: 50%;
+  text-align: justify;
+  line-height: 2.3;
+  color: #F6B17A;
+  font-weight: 400;
+}
+
+article.about-me {
+  margin-top: 40px;
+  width: 100%;
+}
+
+article.about-me table{
+  width: 100%;
+  color: #F6B17A;
+}
+
+article.about-me table tbody{
+  width: 100%;
+}
+
+article.about-me table tr{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+article.about-me table tr td{
+  text-align: center;
+  width: 50%;
+  padding: 8px;
+}
+
+table, tr, td {
   border: solid 1px;
+  border-collapse: collapse;
 }
 
 footer {
-  background-color: violet;
+  background-color: #F6B17A;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.thanks {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+.copy {
+  margin-bottom: 0;
+}
+
+.love {
+  font-size: smaller;
+  padding-bottom: 10px;
+}
+
+/* Media Query for low resolution  Tablets, Ipads */
+@media (min-width: 481px) and (max-width: 767px) {
+  nav.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #nav-title {
+    text-align: center;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }  
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+
+  #foto-diri {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  aside.desc {
+    width: 80%;
+  }
+
+  article.about-me {
+    display: flex;
+    justify-content: center;
+  }
+
+  article.about-me table{
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  nav.nav-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .nav-logo {
+    width: 100%;
+    justify-content: center;
+  }
+
+  #nav-title {
+    text-align: center;
+  }
+
+  ul {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }  
+
+  main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+
+  #foto-diri {
+    width: 100%;
+    padding-bottom: 40px;
+  }
+
+  aside.desc {
+    width: 80%;
+  }
+
+  article.about-me {
+    display: flex;
+    justify-content: center;
+  }
+
+  article.about-me table{
+    width: 80%;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }
